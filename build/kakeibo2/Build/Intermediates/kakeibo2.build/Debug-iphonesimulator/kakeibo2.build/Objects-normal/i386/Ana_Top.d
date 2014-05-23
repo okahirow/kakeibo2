@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/集計/Ana_Top.m \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/集計/Ana_Top.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/GraphVLabelView.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/GraphView.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/GraphView_Circle.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/CalenderDay_View.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/MyUIViewController.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/DB/MyModel.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/DB/DBCategory.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/DB/DBCategory_Data.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/モデル/MyColor.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/モデル/Category_Data.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/DB/DBHistory.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/DB/DBHistory_Data.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/DB/DBCustomAna.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/DB/DBCustomAna_Data.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/LoadingCell.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/MyHistoryCell.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/モデル/MyAnaCategory.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/集計/Ana_HistoryList.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/MyUITableViewController.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/集計/Ana_EditHistory.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/MyUITableView.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/MyAnaGraphCell.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/MyAnaCell.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/モデル/CommonAPI.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/MyAnaCell_multi.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/MyAnaGraphCircleCell.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/MyUIActionSheet.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/集計/Ana_SelectDate.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/CalenderMonth_View.h \
+  /Users/hiro/iPhoneアプリ/kakeibo2/Source/カスタムView/CalenderYear_View.h

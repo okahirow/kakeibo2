@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C2034" minimumToolsVersion="Xcode 4.5" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DBCategory" representedClassName="DBCategory" syncable="YES">
+        <attribute name="cat_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="diff_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" minValueString="-1" defaultValueString="0" syncable="YES"/>
+        <relationship name="cur" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="DBCategory_Data" inverseName="category" inverseEntity="DBCategory_Data" syncable="YES"/>
+        <relationship name="org" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="DBCategory_Data" inverseName="category" inverseEntity="DBCategory_Data" syncable="YES"/>
+    </entity>
+    <entity name="DBCategory_Data" representedClassName="DBCategory_Data" syncable="YES">
+        <attribute name="budget_day" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="budget_month" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="budget_year" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_income" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="is_sepalator" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reseved1" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="reseved2" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="reseved3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reseved4" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" minCount="1" maxCount="1" deletionRule="Deny" destinationEntity="DBCategory" inverseName="org" inverseEntity="DBCategory" syncable="YES"/>
+    </entity>
+    <entity name="DBCustomAna" representedClassName="DBCustomAna" syncable="YES">
+        <attribute name="ana_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="diff_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="index" optional="YES" attributeType="Integer 16" minValueString="-1" defaultValueString="0" syncable="YES"/>
+        <attribute name="is_show" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <relationship name="cur" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="DBCustomAna_Data" inverseName="custom_ana" inverseEntity="DBCustomAna_Data" syncable="YES"/>
+        <relationship name="org" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="DBCustomAna_Data" inverseName="custom_ana" inverseEntity="DBCustomAna_Data" syncable="YES"/>
+    </entity>
+    <entity name="DBCustomAna_Data" representedClassName="DBCustomAna_Data" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="formula" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reserved1" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="reserved2" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="reserved3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reserved4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="custom_ana" minCount="1" maxCount="1" deletionRule="Deny" destinationEntity="DBCustomAna" inverseName="org" inverseEntity="DBCustomAna" syncable="YES"/>
+    </entity>
+    <entity name="DBEvent" representedClassName="DBEvent" isAbstract="YES" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eTag" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="html_link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="person" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sync_status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="val" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="DBEvent_Exception" representedClassName="DBEvent_Exception" parentEntity="DBEvent" syncable="YES">
+        <attribute name="org_date" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="org_event" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DBEvent_Recurrence" inverseName="exceptions" inverseEntity="DBEvent_Recurrence" syncable="YES"/>
+    </entity>
+    <entity name="DBEvent_Normal" representedClassName="DBEvent_Normal" parentEntity="DBEvent" syncable="YES"/>
+    <entity name="DBEvent_Recurrence" representedClassName="DBEvent_Recurrence" parentEntity="DBEvent" syncable="YES">
+        <attribute name="recurrence" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rrule_byday" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rrule_bymonthday" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rrule_count" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="rrule_freq" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rrule_interval" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="rrule_until" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="exceptions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="DBEvent_Exception" inverseName="org_event" inverseEntity="DBEvent_Exception" syncable="YES"/>
+    </entity>
+    <entity name="DBHistory" representedClassName="DBHistory" syncable="YES">
+        <attribute name="diff_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="his_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="cur" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="DBHistory_Data" inverseName="history" inverseEntity="DBHistory_Data" syncable="YES"/>
+        <relationship name="org" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="DBHistory_Data" inverseName="history" inverseEntity="DBHistory_Data" syncable="YES"/>
+    </entity>
+    <entity name="DBHistory_Data" representedClassName="DBHistory_Data" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="person" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="repeat_end_day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="repeat_end_enable" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="repeat_end_month" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="repeat_end_year" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="repeat_type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="repeat_weekday_flag" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="reserved1" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="reserved2" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="reserved3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reserved4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="val" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="history" minCount="1" maxCount="1" deletionRule="Deny" destinationEntity="DBHistory" inverseName="org" inverseEntity="DBHistory" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DBCategory" positionX="36" positionY="153" width="128" height="120"/>
+        <element name="DBCategory_Data" positionX="27" positionY="324" width="128" height="225"/>
+        <element name="DBCustomAna" positionX="619" positionY="155" width="128" height="135"/>
+        <element name="DBCustomAna_Data" positionX="628" positionY="383" width="128" height="195"/>
+        <element name="DBEvent" positionX="-603" positionY="378" width="128" height="208"/>
+        <element name="DBHistory" positionX="394" positionY="173" width="128" height="105"/>
+        <element name="DBHistory_Data" positionX="385" positionY="329" width="128" height="313"/>
+        <element name="DBEvent_Recurrence" positionX="-416" positionY="653" width="128" height="163"/>
+        <element name="DBEvent_Normal" positionX="-711" positionY="630" width="128" height="43"/>
+        <element name="DBEvent_Exception" positionX="-623" positionY="749" width="128" height="73"/>
+    </elements>
+</model>
