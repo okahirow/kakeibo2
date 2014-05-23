@@ -2,7 +2,7 @@
 //  Sync_SelectDB.m
 //  PSPTimer
 //
-//  Created by hiro on 10/11/02.
+//  Created by hiro on 12/11/02.
 //  Copyright 2014 __MyCompanyName__. All rights reserved.
 //
 
