@@ -3,7 +3,7 @@
 //  PSPTimer
 //
 //  Created by hiro on 10/11/02.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
+//  Copyright 2014 __MyCompanyName__. All rights reserved.
 //
 
 #import "Sync_SelectDB.h"
